@@ -14,10 +14,11 @@ Step 1: Create the files in R
 Step 2: Run the first script
 
 ```bash
-    hess.py \
-        --bfile ./1kg_eur_1pct/1kg_eur_1pct_chr22 \
-        --partition ./ldetect-data/EUR/fourier_ls-chr22.bed \
-        --out eq_step1 \
-        --chrom 22 \
-        --local-hsqg eqforhess.txt
+
+for i in {1..22}; do python2 hess.py \
+        --bfile ./1kg_eur_1pct/1kg_eur_1pct_chr${i} \
+        --partition ./ldetect-data/EUR/fourier_ls-chr${i}.bed \
+        --out autism_step1_chr${i} \
+        --chrom ${i} \
+        --local-hsqg autismforhess.txt; done
      ```
