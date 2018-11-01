@@ -18,7 +18,7 @@ Step 2: Run the first script
 for i in {1..22}; do python2 hess.py \
         --bfile ./1kg_eur_1pct/1kg_eur_1pct_chr${i} \
         --partition ./ldetect-data/EUR/fourier_ls-chr${i}.bed \
-        --out autism_step1_chr${i} \
+        --out autism_step1 \
         --chrom ${i} \
         --local-hsqg autismforhess.txt; done
      ```
